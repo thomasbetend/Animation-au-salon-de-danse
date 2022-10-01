@@ -1,11 +1,12 @@
 * {
 background-color: black;
 display: flex;
+justify-content: center;
+align-items: center;
 flex-direction: column;
 }
 
 svg {
-    position: relative;
     width: 100%;
 }
 
@@ -13,11 +14,10 @@ svg {
     fill: none;
     stroke-dasharray: 3000;
     stroke-dashoffset: 3000;
-    width: 75%;
 }
 
 .animate {
-  animation: dash 2s linear 1 forwards;
+  animation: dash 1s linear 1 forwards;
 }
 
 

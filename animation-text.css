@@ -6,6 +6,17 @@ align-items: center;
 flex-direction: column;
 }
 
+.handwriting {
+    width: 70%;
+    z-index: 999
+}
+
+.black-block {
+    z-index: 998;
+    width: 100vw;
+    height: 100vh;
+}
+
 svg {
     width: 100%;
 }
@@ -17,11 +28,13 @@ svg {
 }
 
 .animate {
-  animation: dash 1s linear 1 forwards;
+  animation: text-writing 1s linear 1 forwards;
+  animation-delay: ;
+  animation: ;
 }
 
 
-@keyframes dash {
+@keyframes text-writing {
 
     to {
         stroke-dashoffset: 0; 

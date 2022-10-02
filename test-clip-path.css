@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+.parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+
+.box {
+  animation: circle 3s forwards 3s;
+  background-color: white;
+  clip-path: circle(0%);
+  height: 100%;
+  width: 70%;
+  z-index: 1;
+  color:aqua;
+}
+
+
+@keyframes circle {
+  0% { 
+    clip-path: circle(0%); }
+  100% { 
+    clip-path: circle(100%); }
+}
+
+
+  
+  .handwriting {
+    background-color: black;
+      width: 70%;
+      position: relative;
+  }
+
+  
+  svg {
+      width: 100%;
+      background-color: rgb(39, 39, 39);
+
+  }
+  
+  .map {
+      fill: none;
+      stroke-dasharray: 3000;
+      stroke-dashoffset: 3000;
+  }
+  
+  .animate {
+    animation: text-writing 1.5s linear forwards 1S;
+  }
+
+  .animate2 {
+    position: absolute;
+    width: 500px;
+    top: 100px;
+    animation: translation-top 2s forwards 3.5s;
+  }
+  
+  .adress {
+    position: absolute;
+    bottom: 100px;
+    color: white;
+    text-align: center;
+    animation: translation-bottom 2s forwards 3.5s;
+    
+
+  }
+  
+  @keyframes text-writing {
+      to {
+          stroke-dashoffset: 0; 
+      }
+  } 
+  
+  @keyframes translation-top {
+    to {
+      top: -500px; }
+  }
+
+  @keyframes translation-bottom {
+    to {
+      bottom: -500px; }
+  }

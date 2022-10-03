@@ -12,12 +12,12 @@
 .home-page {
   position: absolute;
   z-index: 1;
-  animation: circle 3s forwards 4.5s;
-  background-color: white;
+  animation: circle 3s forwards 5.2s;
+  background-color: black;
   clip-path: circle(0%);
   width: 100vw;
   height: 100vh;
-  z-index: 1;
+  z-index: 2;
 }
 
 h1 {
@@ -25,8 +25,19 @@ h1 {
   left: 35%;
   top: 40%;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: #dd3333;
 }
 
+.white {
+  position: absolute;
+  background-color: white;
+  clip-path: circle(0%);
+  width: 100vw;
+  height: 100vh;
+  animation: circle 3s forwards 4.5s;
+  z-index: 1;
+}
 
 @keyframes circle {
   0% { 
@@ -70,7 +81,7 @@ svg {
   position: absolute;
   width: 70%;
   left: 15%;
-  top: 5%;
+  top: -5%;
   animation: translation-top 2s forwards 4.5s;
   background-color: black;
 }
@@ -88,7 +99,7 @@ svg {
   fill: #dd3333;
   left: 40%;
   width: 20%;
-  top: 45%;
+  top: 38%;
   animation: translation-bottom 2s forwards 4.5s;
 }
 
@@ -102,10 +113,10 @@ svg {
 
 .adress-bottom {
   position: absolute;
-  top: 80%;
+  top: 77%;
   width: 70%;
   left: 15%;
-  font-size: 2em;
+  font-size: 1.8em;
   color: #dd3333;
   text-align: center;
   animation: translation-bottom 2s forwards 4.5s;
@@ -158,6 +169,10 @@ svg {
 /* responsive smartphone */
 
 @media screen and (max-width: 465px) {
+
+  h1 {
+    left: 25%;
+}
 
   .animate-writing-top {
     width: 90%;

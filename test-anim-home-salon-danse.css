@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+.parent {
+  position: relative;
+}
+
+/* animation apparition home page */
+
+.home-page {
+  position: absolute;
+  z-index: 1;
+  animation: circle 3s forwards 4.5s;
+  background-color: white;
+  clip-path: circle(0%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+h1 {
+  position: absolute;
+  left: 35%;
+  top: 40%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@keyframes circle {
+  0% { 
+    clip-path: circle(0%); }
+  100% { 
+    clip-path: circle(100%); }
+}
+
+/* animation logo writing salon danse */
+
+.handwriting {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+svg {
+    background-color: black;
+}
+
+.map {
+  fill: none;
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  background-color: black;
+}
+
+.animate-writing {
+  animation: text-writing 1.5s linear forwards 0.5s;
+  background-color: black;
+}
+
+@keyframes text-writing {
+  to {
+      stroke-dashoffset: 0; 
+  }
+}
+
+.animate-writing-top {
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  top: 5%;
+  animation: translation-top 2s forwards 4.5s;
+  background-color: black;
+}
+
+@keyframes translation-top {
+  to {
+    top: -500px; }
+}
+
+/* animation logo silhouette salon danse */
+
+.logo-figure-bottom {
+  position: absolute;
+  background-color: black;
+  fill: #dd3333;
+  left: 40%;
+  width: 20%;
+  top: 45%;
+  animation: translation-bottom 2s forwards 4.5s;
+}
+
+.logo-figure {
+  background-color: black;
+  animation: appear 2s forwards 1s;
+  opacity: 0%;
+}
+
+/* animation adress salon danse */
+
+.adress-bottom {
+  position: absolute;
+  top: 80%;
+  width: 70%;
+  left: 15%;
+  font-size: 2em;
+  color: #dd3333;
+  text-align: center;
+  animation: translation-bottom 2s forwards 4.5s;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+.adress {
+  animation: appear 2s forwards 2.5s;
+  opacity: 0%;
+  background-color: black;
+}
+
+@keyframes appear {
+  to {
+      opacity: 100%; 
+  }
+}  
+
+@keyframes translation-bottom {
+  to {
+    top: 2000px; }
+}
+
+/* responsive ipad */
+
+@media screen and (max-width: 820px) {
+
+  .animate-writing-top {
+    width: 90%;
+    left: 5%;
+    top: 10%;
+}
+
+  .logo-figure-bottom {
+    left: 25%;
+    width: 45%;
+    top: 33%;
+}
+
+  .adress-bottom {
+    top: 70%;
+    width: 80%;
+    left: 10%;
+    font-size: 2.5em;
+}
+
+}
+
+/* responsive smartphone */
+
+@media screen and (max-width: 465px) {
+
+  .animate-writing-top {
+    width: 90%;
+    left: 5%;
+    top: 20%;
+}
+
+  .logo-figure-bottom {
+    left: 17%;
+    width: 60%;
+    top: 35%;
+}
+
+  .adress-bottom {
+    top: 65%;
+    width: 80%;
+    left: 10%;
+    font-size: 1.5em;
+}
+
+}

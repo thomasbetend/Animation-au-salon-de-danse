@@ -11,22 +11,25 @@
 
 .home-page {
   position: absolute;
+  background-size: cover;
   z-index: 1;
   animation: circle 3s forwards 5.2s;
   background-color: black;
   clip-path: circle(0%);
   width: 100vw;
   height: 100vh;
-  z-index: 2;
+  z-index: 11;
 }
 
 h1 {
   position: absolute;
   left: 35%;
   top: 40%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Thin','Nunito', Helvetica, sans-serif, 'IBM Plex Serif', serif;
+  font-weight: 50;
+  font-size: 5em;
   background-color: black;
-  color: #dd3333;
+  color: white;
 }
 
 .white {
@@ -36,7 +39,7 @@ h1 {
   width: 100vw;
   height: 100vh;
   animation: circle 3s forwards 4.5s;
-  z-index: 1;
+  z-index: 10;
 }
 
 @keyframes circle {
@@ -63,12 +66,11 @@ svg {
   fill: none;
   stroke-dasharray: 3000;
   stroke-dashoffset: 3000;
-  background-color: black;
+  background-color: transparent;
 }
 
 .animate-writing {
-  animation: text-writing 1.5s linear forwards 0.5s;
-  background-color: black;
+  animation: text-writing 2s linear forwards 0.5s;
 }
 
 @keyframes text-writing {
@@ -83,7 +85,8 @@ svg {
   left: 15%;
   top: -5%;
   animation: translation-top 2s forwards 4.5s;
-  background-color: black;
+  background-color: transparent;
+  z-index: 4;
 }
 
 @keyframes translation-top {
@@ -95,17 +98,18 @@ svg {
 
 .logo-figure-bottom {
   position: absolute;
-  background-color: black;
   fill: #dd3333;
+  background-color: transparent;
   left: 40%;
   width: 20%;
   top: 38%;
   animation: translation-bottom 2s forwards 4.5s;
+  z-index: 2;
 }
 
 .logo-figure {
-  background-color: black;
-  animation: appear 2s forwards 1s;
+  background-color: transparent;
+  animation: appear 2s forwards 3s;
   opacity: 0%;
 }
 
@@ -120,14 +124,15 @@ svg {
   color: #dd3333;
   text-align: center;
   animation: translation-bottom 2s forwards 4.5s;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
+  font-family: 'Roboto Thin', Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  z-index: 3;
 }
 
 .adress {
-  animation: appear 2s forwards 2.5s;
+  animation: appear 2s forwards 3s;
   opacity: 0%;
-  background-color: black;
+  background-color: transparent;
 }
 
 @keyframes appear {
@@ -161,9 +166,8 @@ svg {
     top: 70%;
     width: 80%;
     left: 10%;
-    font-size: 2.5em;
+    font-size: 1.8em;
 }
-
 }
 
 /* responsive smartphone */

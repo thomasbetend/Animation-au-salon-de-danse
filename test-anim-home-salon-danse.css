@@ -1,15 +1,10 @@
-* {
-    padding: 0;
-    margin: 0;
-    background-color: white;
-}
-.parent {
+.home {
   position: relative;
 }
 
 /* animation apparition home page */
 
-.home-page {
+#page {
   position: absolute;
   background-size: cover;
   z-index: 1;
@@ -21,24 +16,15 @@
   z-index: 11;
 }
 
-h1 {
-  position: absolute;
-  left: 35%;
-  top: 40%;
-  font-family: 'Roboto Thin','Nunito', Helvetica, sans-serif, 'IBM Plex Serif', serif;
-  font-weight: 50;
-  font-size: 5em;
-  background-color: black;
-  color: white;
-}
-
 .white {
   position: absolute;
   background-color: white;
   clip-path: circle(0%);
+  margin: 0px;
+  padding: 0px;
   width: 100vw;
   height: 100vh;
-  animation: circle 3s forwards 4.5s;
+  animation: circle 3.5s forwards 4.5s;
   z-index: 10;
 }
 
@@ -46,23 +32,25 @@ h1 {
   0% { 
     clip-path: circle(0%); }
   100% { 
-    clip-path: circle(100%); }
+    clip-path: circle(300%); }
 }
 
 /* animation logo writing salon danse */
 
 .handwriting {
+  margin: 0px;
+  padding: 0px;
   background-color: black;
   width: 100vw;
   height: 100vh;
   position: absolute;
 }
 
-svg {
-    background-color: black;
+.home svg {
+  background-color: black;
 }
 
-.map {
+.home .map {
   fill: none;
   stroke-dasharray: 3000;
   stroke-dashoffset: 3000;
@@ -75,7 +63,7 @@ svg {
 
 @keyframes text-writing {
   to {
-      stroke-dashoffset: 0; 
+    stroke-dashoffset: 0; 
   }
 }
 
@@ -91,7 +79,8 @@ svg {
 
 @keyframes translation-top {
   to {
-    top: -500px; }
+    top: -500px; 
+  }
 }
 
 /* animation logo silhouette salon danse */
@@ -100,11 +89,14 @@ svg {
   position: absolute;
   fill: #dd3333;
   background-color: transparent;
-  left: 40%;
-  width: 20%;
-  top: 38%;
-  animation: translation-bottom 2s forwards 4.5s;
+  left: 44%;
+  top: 41%;
+  animation: translation-bottom 2s 4.5s;
   z-index: 2;
+}
+
+.logo-figure img {
+  width: 22%;
 }
 
 .logo-figure {
@@ -120,7 +112,7 @@ svg {
   top: 77%;
   width: 70%;
   left: 15%;
-  font-size: 1.8em;
+  font-size: 2.4em;
   color: #dd3333;
   text-align: center;
   animation: translation-bottom 2s forwards 4.5s;
@@ -130,20 +122,21 @@ svg {
 }
 
 .adress {
-  animation: appear 2s forwards 3s;
+  animation: appear 2s 3s;
   opacity: 0%;
   background-color: transparent;
 }
 
 @keyframes appear {
   to {
-      opacity: 100%; 
+    opacity: 100%; 
   }
 }  
 
 @keyframes translation-bottom {
   to {
-    top: 2000px; }
+    top: 2000px; 
+  }
 }
 
 /* responsive ipad */
@@ -154,47 +147,48 @@ svg {
     width: 90%;
     left: 5%;
     top: 10%;
-}
+  }
 
   .logo-figure-bottom {
-    left: 25%;
-    width: 45%;
-    top: 33%;
-}
+    left: 40%;
+    top: 45%;
+  }
+
+  .logo-figure img {
+    width: 34%;
+  }
 
   .adress-bottom {
-    top: 70%;
+    top: 73%;
     width: 80%;
     left: 10%;
-    font-size: 1.8em;
-}
+    font-size: 2em;
+  }
 }
 
 /* responsive smartphone */
 
 @media screen and (max-width: 465px) {
 
-  h1 {
-    left: 25%;
-}
-
   .animate-writing-top {
     width: 90%;
     left: 5%;
-    top: 20%;
-}
+    top: 19%;
+  }
 
   .logo-figure-bottom {
-    left: 17%;
-    width: 60%;
-    top: 35%;
-}
+    left: 33%;
+    top: 40%;
+  }
+
+  .logo-figure img {
+    width: 50%;
+  }
 
   .adress-bottom {
-    top: 65%;
+    top: 67%;
     width: 80%;
     left: 10%;
-    font-size: 1.5em;
-}
-
+    font-size: 1.7em;
+  }
 }

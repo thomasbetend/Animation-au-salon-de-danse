@@ -1,21 +1,38 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
 .home {
   position: relative;
 }
 
 /* animation apparition home page */
 
+.button-skip-animation {
+  color: white;
+  z-index: 5;
+  position: absolute;
+  top: 30px;
+  left: 95%;
+  cursor: pointer;
+  opacity: 20%;
+  font-size: 1.7em;
+}
+
 #page {
   position: absolute;
   background-size: cover;
   z-index: 1;
-  animation: circle 3s forwards 5.2s;
-  background-color: black;
+  animation: circle1 3s forwards 6.2s;
+  background-color: blue;
   clip-path: circle(0%);
   width: 100vw;
   height: 100vh;
   z-index: 11;
 }
 
+/*
 .white {
   position: absolute;
   background-color: white;
@@ -24,11 +41,23 @@
   padding: 0px;
   width: 100vw;
   height: 100vh;
-  animation: circle 3.5s forwards 4.5s;
+  animation: circle2 3.5s forwards 4.5s;
   z-index: 10;
+ } 
+ */
+
+ .invisible {
+  display: none;
+ }
+
+@keyframes circle1 {
+  0% { 
+    clip-path: circle(0%); }
+  100% { 
+    clip-path: circle(300%); }
 }
 
-@keyframes circle {
+@keyframes circle2 {
   0% { 
     clip-path: circle(0%); }
   100% { 
@@ -72,7 +101,7 @@
   width: 70%;
   left: 15%;
   top: -5%;
-  animation: translation-top 2s forwards 4.5s;
+  animation: translation-top 2s forwards 6s;
   background-color: transparent;
   z-index: 4;
 }
@@ -90,13 +119,13 @@
   fill: #dd3333;
   background-color: transparent;
   left: 44%;
-  top: 41%;
-  animation: translation-bottom 2s 4.5s;
+  top: 44%;
+  animation: translation-bottom 2s 6s;
   z-index: 2;
 }
 
 .logo-figure img {
-  width: 22%;
+  width: 19%;
 }
 
 .logo-figure {
@@ -112,17 +141,18 @@
   top: 77%;
   width: 70%;
   left: 15%;
-  font-size: 2.4em;
-  color: #dd3333;
+  font-size: 1.6em;
+  color: white;
   text-align: center;
-  animation: translation-bottom 2s forwards 4.5s;
-  font-family: 'Roboto Thin', Arial, Helvetica, sans-serif;
+  animation: translation-bottom 2s forwards 6s;
+  font-family: roboto, Arial, Helvetica, sans-serif;
+  font-weight: 100;
   background-color: transparent;
   z-index: 3;
 }
 
 .adress {
-  animation: appear 2s 3s;
+  animation: appear 2s forwards 3s;
   opacity: 0%;
   background-color: transparent;
 }
@@ -142,6 +172,11 @@
 /* responsive ipad */
 
 @media screen and (max-width: 820px) {
+
+  .button-skip-animation {
+    top: 40px;
+    left: 90%;
+  }
 
   .animate-writing-top {
     width: 90%;
@@ -169,6 +204,12 @@
 /* responsive smartphone */
 
 @media screen and (max-width: 465px) {
+
+  .button-skip-animation {
+    top: 30px;
+    left: 85%;
+    font-size: 1em;
+  }
 
   .animate-writing-top {
     width: 90%;
